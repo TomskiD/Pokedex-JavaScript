@@ -2,6 +2,7 @@ const pokeList = document.querySelector('.pokemon-list');
 const filterType = document.getElementById('pokemon-filter-type');
 const filterEdition = document.getElementById('pokemon-filter-edition');
 const pagination = document.getElementById('pagination');
+const pokeCache = {}
 
 const editionsOfPokemon = {
     'johto': { from: 152, to: 251 },
@@ -9,8 +10,8 @@ const editionsOfPokemon = {
     'hoenn': { from: 252, to: 386 },
 };
 
-let typeOfPokemon;
-let edition;
+let typeOfPokemon; 
+let edition; 
 let currentPage = 1;
 let pages;
 let elementsPerPage = 12;
@@ -86,7 +87,7 @@ const displayPagination = () => {
 const displayPokemon = (pokemon) => {
 
     const pokemonCard = pokemon.map((poke) =>
-            `
+        `
         <li class="card" onclick='choosePokemon(${poke.id})'>
         <img class="card-image" src="${poke.image}"/>
         <h2 class="card-title">${poke.id}. ${poke.name}</h2>
@@ -114,7 +115,7 @@ const displayPopUp = (poke) => {
     const abilities = poke.abilities.map(ability => ability.ability.name).join(' ');
     const image = poke.sprites['front_default'];
     const popup =
-        `
+    `
     <div class='popUp'>
         <button class='popUp-close' onclick='closePopUp()'> 
         close
