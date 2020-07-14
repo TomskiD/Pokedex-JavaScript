@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #cb3b3b;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    background: #fff;
+    color: #581b98;
+    width: 15rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 4 rem;
+}
+
+.banner {
+    margin-top: 40px;
+}
+
+.select {
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-container {
+    margin: 0 auto;
+    width: 300px;
+}
+
+.pokemon-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 60px 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-image {
+    width: 200px;
+    height: 200px;
+}
+
+.popUp {
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.popUp-close {
+    position: absolute;
+    top: 258px;
+    right: 14px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: orangered;
+    transition: 0.5s;
+}
+
+.popUp-close:hover {
+    cursor: pointer;
+    background: #fff;
+    color: orangered;
+    transition: 0.5s;
+    box-shadow: 0px 4px 4px orangered;
+}
+
+.card-popup {
+    margin: 60px 0;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.card-image-popup {
+    width: 200px;
+    height: 200px;
+}
+
+.card-title-popup {
+    margin-bottom: 20px;
+}
+
+.pagenumbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagenumbers a {
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 40px 10px;
+    font-size: 1rem;
+    background-color: orangered;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    transition: 0.4s;
+    z-index: 1;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.pagenumbers a.active {
+    background: #581b98;
+}
+
+.pagenumbers button:hover {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    z-index: inherit 2;
+}
+
+@media screen and (min-width: 1200px) {
+    .pokemon-container {
+        margin: 0 auto;
+        width: 1400px;
+    }
+    .pokemon-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .card-popup {
+        margin: 60px 0;
+        width: 800px;
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .card-image-popup {
+        width: 500px;
+        height: 500px;
+    }
+    .popUp-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 20px 30px;
+        font-size: 1rem;
+        color: #fff;
+        background: orangered;
+        transition: 0.5s;
+    }
+    .popUp-close:hover {
+        cursor: pointer;
+        background: #fff;
+        color: orangered;
+        transition: 0.5s;
+        box-shadow: 0px 4px 4px orangered;
+    }
+    .pokemon-bio {
+        line-height: 30px;
+    }
+    .pagenumbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    .pagenumbers a {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        margin: 40px 10px;
+        font-size: 1rem;
+        background-color: orangered;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        color: #fff;
+        transition: 0.4s;
+        z-index: 1;
+        text-decoration: none;
+        line-height: 50px;
+    }
+    .pagenumbers a.active {
+        background: #581b98;
+    }
+    .pagenumbers button:hover {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        z-index: inherit 2;
+    }
+}
