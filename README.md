@@ -7,6 +7,7 @@
 * [Technologies](#technologies)
 
 ## General info
+Demo: https://tomskid.github.io/Pokedex-JavaScript
 
 Pokémon can be found with two filters. The first serves a type of pokémon such as ground, Eletric, psychics, etc.
 The second one depends on generation to choose, Kanto, John, Hoenn
